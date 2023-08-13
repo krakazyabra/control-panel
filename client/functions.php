@@ -45,7 +45,7 @@ function displayMainMenu()
             <div class="col-lg-8 text-center">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="/client">Дашборд</a>
+                        <a class="nav-link" href="/client/dashboard">Дашборд</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/client/messages">Messages</a>
@@ -61,8 +61,8 @@ function displayMainMenu()
                         <?php echo htmlspecialchars($_SESSION['username']); ?>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="settings/edit.php">Edit Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                        <li><a class="dropdown-item" href="/client/settings/edit.php">Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="/logout.php">Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -98,7 +98,7 @@ function displayLeftMenu()
             <li class="text-nowrap mb-2"><i class="fas fa-wrench"></i> Сервис
                 <?php echo htmlspecialchars($service_id); ?>
             </li>
-            <li class="text-nowrap mb-2"><i class="fas fa-plus-square"></i> Добавить сервис</li>
+            <li class="text-nowrap mb-2"><a href="/client/services/add.php"><i class="fas fa-plus-square"></i> Добавить сервис</a></li>
             <hr>
             <li class="text-nowrap mb-2"><i class="fas fa-cloud"></i> Облачные серверы</li>
             <li class="text-nowrap mb-2"><i class="fas fa-server"></i> Выделенные серверы</li>
